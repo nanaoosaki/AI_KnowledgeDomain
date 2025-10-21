@@ -12,7 +12,8 @@ url: "https://nanaoosaki.github.io"
 repository: nanaoosaki/AI_KnowledgeDomain
 
 # Theme
-remote_theme: just-the-docs/just-the-docs@v0.8.2
+remote_theme: just-the-docs/just-the-docs
+theme: just-the-docs
 
 # Color scheme
 color_scheme: dark
