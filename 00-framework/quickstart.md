@@ -1,3 +1,10 @@
+---
+layout: default
+title: Quick Start
+parent: Framework
+nav_order: 3
+---
+
 # Quick Start Guide
 
 > Get oriented in the AI Knowledge Domain

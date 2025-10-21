@@ -1,10 +1,3 @@
----
-layout: default
-title: Initial Sketch
-parent: Framework
-nav_order: 4
----
-
 # AI Leadership: Initial Framework Sketch
 
 > This was the initial conversation that sparked this knowledge base. Preserved here as the seed that grew into the structured system.

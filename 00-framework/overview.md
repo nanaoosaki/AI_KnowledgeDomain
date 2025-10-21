@@ -1,3 +1,10 @@
+---
+layout: default
+title: Framework Overview
+parent: Framework
+nav_order: 1
+---
+
 # AI Leadership Framework: Operating Map
 
 > The mental architecture for navigating AI/DS technical leadership in 2025 and beyond

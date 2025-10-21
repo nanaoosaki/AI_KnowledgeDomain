@@ -1,5 +1,16 @@
+---
+layout: default
+title: Systems & Infrastructure
+nav_order: 3
+has_children: true
+permalink: /systems
+---
+
 # Systems & Infrastructure
+{: .no_toc }
+
 *The Engineering Spine*
+{: .fs-6 .fw-300 }
 
 > How modern AI systems are built, deployed, and scaled—from data pipelines to production inference
 
@@ -27,7 +38,7 @@ The gap between "model works in notebook" and "system serves millions of users" 
 - [ ] Containerization & Orchestration Basics
 - [ ] Cloud Compute Economics
 - [ ] Data Versioning & Lineage
-
+ 
 ### Intermediate Topics
 *Applied techniques for production systems*
 

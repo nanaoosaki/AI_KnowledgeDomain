@@ -1,5 +1,16 @@
+---
+layout: default
+title: Meta-Learning
+nav_order: 7
+has_children: true
+permalink: /meta-learning
+---
+
 # Meta-Learning
+{: .no_toc }
+
 *The Self-Evolution Layer*
+{: .fs-6 .fw-300 }
 
 > Systems for continuous learning, prioritization, and evaluation in a rapidly changing field
 

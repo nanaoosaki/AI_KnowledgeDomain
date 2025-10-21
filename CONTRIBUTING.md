@@ -1,3 +1,9 @@
+---
+layout: default
+title: Contributing
+nav_order: 8
+---
+
 # Contributing to AI Knowledge Domain
 
 ## Content Philosophy

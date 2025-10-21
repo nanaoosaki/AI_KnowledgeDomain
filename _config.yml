@@ -1,0 +1,143 @@
+# AI Knowledge Domain - Jekyll Configuration
+
+# Site settings
+title: AI Knowledge Domain
+description: A living knowledge base for AI/DS technical leadership
+author: nanaoosaki
+email: your-email@example.com
+baseurl: "/AI_KnowledgeDomain"
+url: "https://nanaoosaki.github.io"
+
+# Repository
+repository: nanaoosaki/AI_KnowledgeDomain
+
+# Theme
+remote_theme: just-the-docs/just-the-docs@v0.8.2
+
+# Color scheme
+color_scheme: dark
+
+# Logo and favicon
+logo: ""
+
+# Navigation
+nav_enabled: true
+nav_sort: case_insensitive
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Heading anchors
+heading_anchors: true
+
+# Aux links (top right)
+aux_links:
+  "View on GitHub":
+    - "https://github.com/nanaoosaki/AI_KnowledgeDomain"
+
+# Footer
+footer_content: "Copyright &copy; 2025 nanaoosaki. Licensed under MIT. Built with depth, discernment, and deliberate thinking."
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Callouts
+callouts_level: quiet
+callouts:
+  warning:
+    title: Warning
+    color: red
+  note:
+    title: Note
+    color: blue
+  important:
+    title: Important
+    color: yellow
+
+# Mermaid diagrams support
+mermaid:
+  version: "10.6.1"
+
+# Kramdown settings
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections (for organizing content)
+collections:
+  framework:
+    permalink: "/framework/:path/"
+    output: true
+  systems:
+    permalink: "/systems/:path/"
+    output: true
+  modeling:
+    permalink: "/modeling/:path/"
+    output: true
+  product:
+    permalink: "/product/:path/"
+    output: true
+  people:
+    permalink: "/people/:path/"
+    output: true
+  metalearning:
+    permalink: "/meta-learning/:path/"
+    output: true
+
+# Just the Docs specific settings
+just_the_docs:
+  collections:
+    framework:
+      name: Framework
+      nav_exclude: false
+      search_exclude: false
+    systems:
+      name: Systems & Infrastructure
+      nav_exclude: false
+      search_exclude: false
+    modeling:
+      name: Modeling & Intelligence
+      nav_exclude: false
+      search_exclude: false
+    product:
+      name: Product & Strategy
+      nav_exclude: false
+      search_exclude: false
+    people:
+      name: People & Organization
+      nav_exclude: false
+      search_exclude: false
+    metalearning:
+      name: Meta-Learning
+      nav_exclude: false
+      search_exclude: false
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .cursor/
+  - _drafts/
+  - _personal/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
+

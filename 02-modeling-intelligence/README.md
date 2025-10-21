@@ -1,5 +1,16 @@
+---
+layout: default
+title: Modeling & Intelligence
+nav_order: 4
+has_children: true
+permalink: /modeling
+---
+
 # Modeling & Intelligence
+{: .no_toc }
+
 *The Cognitive Layer*
+{: .fs-6 .fw-300 }
 
 > How models reason, generalize, and fail—both traditional ML and modern LLMs
 

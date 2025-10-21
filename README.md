@@ -83,6 +83,12 @@ Each knowledge entry follows these principles:
 
 **For contributing**: See [CONTRIBUTING.md](./CONTRIBUTING.md) for templates and guidelines
 
+## Access
+
+**Website**: [https://nanaoosaki.github.io/AI_KnowledgeDomain](https://nanaoosaki.github.io/AI_KnowledgeDomain)
+
+**Repository**: [https://github.com/nanaoosaki/AI_KnowledgeDomain](https://github.com/nanaoosaki/AI_KnowledgeDomain)
+
 ## Meta
 
 **Maintained by**: [nanaoosaki](https://github.com/nanaoosaki)

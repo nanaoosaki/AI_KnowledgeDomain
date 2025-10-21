@@ -1,5 +1,16 @@
+---
+layout: default
+title: People & Organization
+nav_order: 6
+has_children: true
+permalink: /people
+---
+
 # People & Organization
+{: .no_toc }
+
 *The Scaling Layer*
+{: .fs-6 .fw-300 }
 
 > How teams, culture, and governance enable or constrain AI success
 

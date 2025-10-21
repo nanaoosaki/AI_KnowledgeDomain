@@ -1,3 +1,10 @@
+---
+layout: default
+title: Philosophy
+parent: Framework
+nav_order: 2
+---
+
 # The Philosophy Behind This Knowledge Base
 
 > Why this exists and how it differs from typical AI documentation

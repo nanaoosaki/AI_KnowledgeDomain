@@ -1,5 +1,16 @@
+---
+layout: default
+title: Product & Strategy
+nav_order: 5
+has_children: true
+permalink: /product
+---
+
 # AI Product & Strategy
+{: .no_toc }
+
 *The Translation Layer*
+{: .fs-6 .fw-300 }
 
 > Connecting AI capabilities to real business leverage
 
