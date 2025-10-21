@@ -1,0 +1,226 @@
+// Custom color scheme inspired by clean, minimal documentation
+// Similar to Lilian Weng's blog aesthetic
+
+// Override Just the Docs colors for a subtle, professional look
+$body-background-color: #ffffff;
+$sidebar-color: #f8f9fa;
+$body-text-color: #2c3e50;
+$body-heading-color: #1a202c;
+$link-color: #3b82f6;
+$nav-child-link-color: #4b5563;
+$code-background-color: #f6f8fa;
+$border-color: #e5e7eb;
+
+// Typography - clean and professional
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$mono-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, "Courier New", monospace;
+
+// Subtle accent colors
+$btn-primary-color: #3b82f6;
+$btn-primary-hover-color: #2563eb;
+
+// Search and navigation
+$search-background-color: #f8f9fa;
+$search-result-preview-color: #6b7280;
+
+// Code blocks - subtle gray background
+$code-linenumber-color: #9ca3af;
+
+// Table of contents
+$feedback-color: #64748b;
+
+// Links - professional blue, not too bright
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  
+  &:hover {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+}
+
+// Headers - slightly darker for hierarchy
+h1, h2, h3, h4, h5, h6 {
+  color: #1a202c;
+  font-weight: 600;
+}
+
+// Sidebar styling - very subtle
+.side-bar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #e5e7eb;
+}
+
+// Navigation links - subtle and clean
+.navigation,
+.navigation-list {
+  font-size: 14px;
+}
+
+.navigation-list-link {
+  color: #4b5563;
+  
+  &:hover {
+    color: #1f2937;
+    background-color: #f3f4f6;
+  }
+}
+
+// Main content area
+.main-content {
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+// Inline code - subtle highlight
+code {
+  background-color: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+  color: #e83e8c;
+}
+
+// Code blocks
+pre {
+  background-color: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  
+  code {
+    background-color: transparent;
+    border: none;
+    color: #1f2937;
+  }
+}
+
+// Blockquotes - subtle left border like Lilian's blog
+blockquote {
+  border-left: 4px solid #3b82f6;
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #4b5563;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Tables - clean and minimal
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  td, th {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+  }
+  
+  tr:hover {
+    background-color: #f9fafb;
+  }
+}
+
+// Labels/badges - subtle colors
+.label {
+  border-radius: 4px;
+  padding: 0.25em 0.6em;
+  font-size: 0.875em;
+  font-weight: 500;
+}
+
+.label-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.label-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.label-purple {
+  background-color: #e9d5ff;
+  color: #6b21a8;
+}
+
+.label-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.label-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+// Search bar - clean and minimal
+.search-input {
+  background-color: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  
+  &:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+}
+
+// Footer - subtle
+.site-footer {
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+// Buttons - clean and professional
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  
+  &.btn-primary {
+    background-color: #3b82f6;
+    
+    &:hover {
+      background-color: #2563eb;
+    }
+  }
+}
+
+// Callouts/alerts - subtle and clean
+.note {
+  background-color: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  
+  > :first-child {
+    margin-top: 0;
+  }
+  
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.warning {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+}
+
+.important {
+  background-color: #fee2e2;
+  border-left: 4px solid #ef4444;
+}
+

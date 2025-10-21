@@ -16,7 +16,7 @@ remote_theme: just-the-docs/just-the-docs
 theme: just-the-docs
 
 # Color scheme
-color_scheme: dark
+color_scheme: light
 
 # Logo and favicon
 logo: ""
@@ -122,6 +122,11 @@ just_the_docs:
       name: Meta-Learning
       nav_exclude: false
       search_exclude: false
+
+# Enable custom CSS
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from processing
 exclude:
