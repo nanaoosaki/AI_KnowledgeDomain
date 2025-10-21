@@ -1,0 +1,50 @@
+# AI Knowledge Domain - Git Ignore
+
+# Temporary files
+*.tmp
+*.temp
+~*
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Python (if adding code examples)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Jupyter Notebooks (checkpoints)
+.ipynb_checkpoints/
+
+# Personal notes (not for publication)
+_drafts/
+_personal/
+_scratch/
+
+# Build artifacts
+*.pdf
+*.docx
+_site/
+.jekyll-cache/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
