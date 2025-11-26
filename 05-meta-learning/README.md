@@ -2,7 +2,6 @@
 layout: default
 title: Meta-Learning
 nav_order: 7
-has_children: true
 permalink: /meta-learning
 ---
 
