@@ -67,6 +67,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// Top-level navigation items - uppercase styling
+.nav-list > .nav-list-item > .nav-list-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
 // Main content area
 .main-content {
   line-height: 1.7;

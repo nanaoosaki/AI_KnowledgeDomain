@@ -61,11 +61,11 @@ The gap between "model works in notebook" and "system serves millions of users" 
 
 ## Learning Path
 
-**If you're starting out** → Begin with foundational concepts, set up a simple MLOps pipeline
+**If you're starting out** → Begin with core concepts, set up a simple MLOps pipeline
 
-**If you're building production systems** → Focus on intermediate topics, especially monitoring and cost optimization
+**If you're building production systems** → Focus on monitoring and cost optimization
 
-**If you're scaling to millions** → Dive into advanced topics for performance and reliability
+**If you're scaling to millions** → Dive into performance and reliability topics
 
 ## Key Resources
 
@@ -113,5 +113,5 @@ The gap between "model works in notebook" and "system serves millions of users" 
 
 ---
 
-*Explore specific topics in the folders above or start with [ML Pipeline Architecture](foundational/ml-pipeline-architecture.md)*
+*Explore specific topics using the Knowledge Articles section above*
 

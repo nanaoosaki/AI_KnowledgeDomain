@@ -134,5 +134,5 @@ Understanding model behavior is fundamental to AI leadership. You don't need to 
 
 ---
 
-*Explore specific topics in the folders above or start with [Embeddings & Vector Representations](foundational/embeddings-vectors.md)*
+*Explore specific topics using the Knowledge Articles section above*
 
