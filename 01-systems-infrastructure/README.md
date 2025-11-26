@@ -99,5 +99,19 @@ The gap between "model works in notebook" and "system serves millions of users" 
 
 ---
 
+## Knowledge Articles
+
+### Core Topics
+
+- [1. Why different attention mechanisms exist](different%20attention%20mechanisms%20and%20their%20uses.md)
+- [Evole From Applied Ml Scientist To Applied Dl And Ai Scientist](evole%20from%20applied%20ML%20scientist%20to%20applied%20DL%20and%20AI%20scientist.md)
+- [**1. Hugging Face is *not* scikit-learn**](how%20to%20go%20from%20scikit%20learn%20to%20transformers.md)
+- [✅ What we recommended you do](how%20to%20train%20your%20own%20transformer%20locally.md)
+- [A More Expressive Foundation for Your AI Knowledge Domain](how%20tranformers%20and%20LLMs%20run-%20the%20layer%20and%20who%20provides%20them.md)
+- [🌱 1. At the programming-language level](imperative%20vs%20declarative)
+- [1. BERT: Architecturally limited for the modern era](why%20T5%20and%20BART%20are%20less%20known.md)
+
+---
+
 *Explore specific topics in the folders above or start with [ML Pipeline Architecture](foundational/ml-pipeline-architecture.md)*
 

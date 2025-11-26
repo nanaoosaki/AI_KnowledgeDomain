@@ -15,6 +15,9 @@ A living knowledge base for AI/DS technical leadership — built on depth, disce
 [Get Started](#quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/nanaoosaki/AI_KnowledgeDomain){: .btn .fs-5 .mb-4 .mb-md-0 }
 
+**Connect**: [LinkedIn](https://www.linkedin.com/in/nana-wang-00593465/) · [Personal Site](https://nanawang.dev/)
+{: .fs-5 .mt-4 }
+
 ---
 
 ## Philosophy
@@ -144,6 +147,8 @@ Each knowledge entry follows these principles:
 ## About
 
 **Maintained by**: [nanaoosaki](https://github.com/nanaoosaki)
+
+**Connect**: [LinkedIn](https://www.linkedin.com/in/nana-wang-00593465/) · [Personal Site](https://nanawang.dev/)
 
 **License**: MIT - Use freely, attribute generously
 

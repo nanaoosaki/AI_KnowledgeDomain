@@ -19,3 +19,11 @@ This section contains the foundational thinking models that underpin the entire 
 
 Start here to understand the big picture before diving into specific domains.
 
+## Knowledge Articles
+
+### Core Topics
+
+- [AI Leadership: Initial Framework Sketch](initial-sketch.md)
+- [The Philosophy Behind This Knowledge Base](meta-philosophy.md)
+- [AI Leadership Framework: Operating Map](overview.md)
+- [Quick Start Guide](quickstart.md)
