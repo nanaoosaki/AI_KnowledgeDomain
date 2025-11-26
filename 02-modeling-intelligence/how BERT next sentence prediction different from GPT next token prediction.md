@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. The intuition first
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

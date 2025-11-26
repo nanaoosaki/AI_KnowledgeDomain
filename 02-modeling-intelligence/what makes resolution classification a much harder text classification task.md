@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. More text ≠ easier classification
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

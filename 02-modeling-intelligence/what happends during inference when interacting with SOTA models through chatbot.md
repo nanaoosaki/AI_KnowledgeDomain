@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. Why tokenization matters
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

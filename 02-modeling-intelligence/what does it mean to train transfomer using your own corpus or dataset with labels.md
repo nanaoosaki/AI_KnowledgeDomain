@@ -1,3 +1,9 @@
+---
+layout: default
+title: 🌱 First: What actually changes between tasks?
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

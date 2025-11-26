@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. BERT: Architecturally limited for the modern era
+parent: Systems & Infrastructure
+---
+
 *[← Back to Systems & Infrastructure](README.md)*
 
 ---

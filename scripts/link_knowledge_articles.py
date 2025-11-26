@@ -131,6 +131,74 @@ def has_back_reference(filepath: Path) -> bool:
         return False
 
 
+def has_frontmatter(filepath: Path) -> bool:
+    """Check if file already has Jekyll frontmatter."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip()
+            return first_line == '---'
+    except Exception:
+        return False
+
+
+def add_frontmatter_and_back_reference(filepath: Path, readme_title: str, parent_title: str, dry_run: bool = False) -> bool:
+    """Add Jekyll frontmatter and back-reference to the file."""
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if already has proper frontmatter with parent
+        if content.startswith('---') and f'parent: {parent_title}' in content[:500]:
+            print(f"  ✓ {filepath.name} already has proper frontmatter")
+            return False
+        
+        # If has frontmatter but wrong parent, or back-reference without frontmatter
+        if content.startswith('*[← Back to'):
+            # Remove existing back-reference
+            lines = content.split('\n')
+            # Remove lines until we get past the back-reference separator
+            while lines and (lines[0].startswith('*[← Back to') or lines[0].strip() == '---' or lines[0].strip() == ''):
+                lines.pop(0)
+            content = '\n'.join(lines).lstrip()
+        elif content.startswith('---'):
+            # Has frontmatter but wrong parent - need to update
+            # Extract existing frontmatter
+            parts = content.split('---', 2)
+            if len(parts) >= 3:
+                # Keep content after frontmatter
+                content = parts[2].lstrip()
+        
+        # Extract title (first heading from cleaned content)
+        title = extract_first_heading(filepath)
+        
+        # Create frontmatter
+        frontmatter = f"""---
+layout: default
+title: {title}
+parent: {parent_title}
+---
+
+"""
+        
+        # Create back-reference  
+        back_ref = f"*[← Back to {readme_title}](README.md)*\n\n---\n\n"
+        
+        # Combine: frontmatter + back-reference + content
+        new_content = frontmatter + back_ref + content
+        
+        if dry_run:
+            print(f"  [DRY RUN] Would add frontmatter and back-reference to {filepath.name}")
+        else:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            print(f"  ✓ Added frontmatter and back-reference to {filepath.name}")
+        
+        return True
+    except Exception as e:
+        print(f"  ✗ Error processing {filepath.name}: {e}")
+        return False
+
+
 def add_back_reference(filepath: Path, readme_title: str, dry_run: bool = False) -> bool:
     """Add back-reference to README.md at the top of the file."""
     if has_back_reference(filepath):
@@ -198,6 +266,20 @@ def update_readme(readme_path: Path, new_section: str, dry_run: bool = False) ->
         return False
 
 
+def get_parent_title(directory: Path) -> str:
+    """Get the parent title for Jekyll navigation."""
+    dir_name = directory.name
+    parent_map = {
+        '00-framework': 'Framework',
+        '01-systems-infrastructure': 'Systems & Infrastructure',
+        '02-modeling-intelligence': 'Modeling & Intelligence',
+        '03-product-strategy': 'Product & Strategy',
+        '04-people-organization': 'People & Organization',
+        '05-meta-learning': 'Meta-Learning'
+    }
+    return parent_map.get(dir_name, dir_name)
+
+
 def process_directory(directory: Path, dry_run: bool = False) -> Dict[str, int]:
     """Process a single directory."""
     stats = {'files_found': 0, 'readme_updated': 0, 'refs_added': 0}
@@ -209,8 +291,9 @@ def process_directory(directory: Path, dry_run: bool = False) -> Dict[str, int]:
         print(f"  ⚠ No README.md found, skipping")
         return stats
     
-    # Get directory title
+    # Get directory title and parent
     dir_title = get_directory_title(readme_path)
+    parent_title = get_parent_title(directory)
     
     # Scan for markdown files
     md_files = scan_directory(directory)
@@ -227,9 +310,9 @@ def process_directory(directory: Path, dry_run: bool = False) -> Dict[str, int]:
     if update_readme(readme_path, new_section, dry_run):
         stats['readme_updated'] = 1
     
-    # Add back-references to content files
+    # Add frontmatter and back-references to content files
     for file in md_files:
-        if add_back_reference(file, dir_title, dry_run):
+        if add_frontmatter_and_back_reference(file, dir_title, parent_title, dry_run):
             stats['refs_added'] += 1
     
     return stats

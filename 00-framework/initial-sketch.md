@@ -1,8 +1,13 @@
+---
+layout: default
+title: AI Leadership: Initial Framework Sketch
+parent: Framework
+---
+
 *[← Back to Framework](README.md)*
 
 ---
 
----
 layout: default
 title: Initial Sketch
 parent: Framework

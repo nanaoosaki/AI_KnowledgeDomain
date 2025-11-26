@@ -1,8 +1,13 @@
+---
+layout: default
+title: The Philosophy Behind This Knowledge Base
+parent: Framework
+---
+
 *[← Back to Framework](README.md)*
 
 ---
 
----
 layout: default
 title: Philosophy
 parent: Framework

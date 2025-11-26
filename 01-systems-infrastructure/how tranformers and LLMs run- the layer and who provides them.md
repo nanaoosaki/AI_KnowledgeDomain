@@ -1,3 +1,9 @@
+---
+layout: default
+title: A More Expressive Foundation for Your AI Knowledge Domain
+parent: Systems & Infrastructure
+---
+
 *[← Back to Systems & Infrastructure](README.md)*
 
 ---

@@ -1,3 +1,9 @@
+---
+layout: default
+title: 🌟 1. What these tokens are called
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

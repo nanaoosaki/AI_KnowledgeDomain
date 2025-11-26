@@ -1,8 +1,13 @@
+---
+layout: default
+title: AI Leadership Framework: Operating Map
+parent: Framework
+---
+
 *[← Back to Framework](README.md)*
 
 ---
 
----
 layout: default
 title: Framework Overview
 parent: Framework

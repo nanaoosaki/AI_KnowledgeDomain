@@ -1,3 +1,9 @@
+---
+layout: default
+title: ✅ What we recommended you do
+parent: Systems & Infrastructure
+---
+
 *[← Back to Systems & Infrastructure](README.md)*
 
 ---

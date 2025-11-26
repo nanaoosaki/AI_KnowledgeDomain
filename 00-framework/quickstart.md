@@ -1,8 +1,13 @@
+---
+layout: default
+title: Quick Start Guide
+parent: Framework
+---
+
 *[← Back to Framework](README.md)*
 
 ---
 
----
 layout: default
 title: Quick Start
 parent: Framework

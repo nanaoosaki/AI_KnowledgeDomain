@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. Start with the nature of the target (CSAT)
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---

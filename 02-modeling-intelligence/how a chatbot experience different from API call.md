@@ -1,3 +1,9 @@
+---
+layout: default
+title: 1. Single-turn inference (API call)
+parent: Modeling & Intelligence
+---
+
 *[← Back to Modeling & Intelligence](README.md)*
 
 ---
