@@ -2,6 +2,7 @@
 layout: default
 title: Product & Strategy
 nav_order: 5
+has_children: true
 permalink: /product
 ---
 

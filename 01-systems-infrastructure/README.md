@@ -2,6 +2,7 @@
 layout: default
 title: Systems & Infrastructure
 nav_order: 3
+has_children: true
 permalink: /systems
 ---
 

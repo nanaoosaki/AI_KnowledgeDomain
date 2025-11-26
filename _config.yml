@@ -74,55 +74,6 @@ kramdown:
     block:
       line_numbers: false
 
-# Collections (for organizing content)
-collections:
-  framework:
-    permalink: "/framework/:path/"
-    output: true
-  systems:
-    permalink: "/systems/:path/"
-    output: true
-  modeling:
-    permalink: "/modeling/:path/"
-    output: true
-  product:
-    permalink: "/product/:path/"
-    output: true
-  people:
-    permalink: "/people/:path/"
-    output: true
-  metalearning:
-    permalink: "/meta-learning/:path/"
-    output: true
-
-# Just the Docs specific settings
-just_the_docs:
-  collections:
-    framework:
-      name: Framework
-      nav_exclude: false
-      search_exclude: false
-    systems:
-      name: Systems & Infrastructure
-      nav_exclude: false
-      search_exclude: false
-    modeling:
-      name: Modeling & Intelligence
-      nav_exclude: false
-      search_exclude: false
-    product:
-      name: Product & Strategy
-      nav_exclude: false
-      search_exclude: false
-    people:
-      name: People & Organization
-      nav_exclude: false
-      search_exclude: false
-    metalearning:
-      name: Meta-Learning
-      nav_exclude: false
-      search_exclude: false
-
 # Enable custom CSS
 sass:
   sass_dir: _sass
