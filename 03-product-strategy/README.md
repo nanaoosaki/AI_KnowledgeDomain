@@ -149,6 +149,12 @@ The best model is worthless if it solves the wrong problem. This domain focuses 
 
 **✗ Overpromising capabilities**: Leading to user disappointment and churn
 
+## Knowledge Articles
+
+### Core Topics
+
+- [How to Deploy a Static Next.js Site on GitHub Pages for Free](how%20to%20deploy%20your%20own%20static%20site%20at%20github%20for%20free.md)
+
 ---
 
 *Explore specific topics in the folders above or start with [AI Use Case Frameworks](foundational/use-case-frameworks.md)*

@@ -1,0 +1,149 @@
+[Unverified]
+
+At a high level, running things “in PyTorch vs TensorFlow” usually doesn’t change your **model idea**, but it does change how you **code it, debug it, and sometimes deploy it**. Here’s a compact comparison that hits the pieces you asked about.
+
+---
+
+### 1. Architecture / execution model
+
+* **PyTorch**
+
+  * Eager execution by default: operations run immediately as regular Python.
+  * Feels like “normal” Python/numpy with tensors.
+  * You can optionally trace/compile with `torch.jit` or `torch.compile`, but it’s not required.
+  * Very popular in research / experimentation because it’s easy to debug and introspect.
+
+* **TensorFlow (TF 2.x)**
+
+  * Also *looks* eager by default, but performance often relies on `@tf.function` to build graphs.
+  * Under the hood, a lot of power comes from graph execution (XLA, optimizations, TF Serving).
+  * Keras is the high-level API (`tf.keras`), which gives a more declarative “layers + compile + fit” style.
+
+In practice: PyTorch tends to feel more “Pythonic, imperative”; TensorFlow/Keras feels more “framework, declarative.”
+
+---
+
+### 2. Hardware support
+
+* **Both**
+
+  * Run on CPU and NVIDIA GPUs with CUDA.
+  * Both support mixed precision, multi-GPU, distributed training (though with different APIs).
+
+* **TensorFlow**
+
+  * Historically had stronger support for **TPUs** (Google Cloud TPUs) via `tf.distribute` and TPU strategies.
+  * If you know you’re going to rely heavily on TPUs, TF is often still the more mature path.
+
+* **PyTorch**
+
+  * Strong ecosystem for GPU training (research, open-source models).
+  * Good distributed training via `torch.distributed`, `DeepSpeed`, etc.
+  * TPU support exists (e.g., PyTorch/XLA), but it’s not as central to the ecosystem as for TF.
+
+For your own local GPU experiments (like you’re doing), both are fine; PyTorch is often smoother to start with.
+
+---
+
+### 3. Frameworks / libraries / ecosystem
+
+* **Built on PyTorch**
+
+  * Hugging Face Transformers (supports both, but PyTorch is usually first-class).
+  * PyTorch Lightning, Accelerate, etc. for training loops.
+  * Lots of cutting-edge research code is released in PyTorch first.
+
+* **Built on TensorFlow**
+
+  * tf.keras ecosystem, TF Hub, some older production pipelines.
+  * TensorFlow Extended (TFX) for production ML pipelines (data → training → serving).
+  * Historically more integrated “end-to-end” story (training + serving + mobile, etc.).
+
+In 2025, a lot of LLM / modern NLP tutorials default to **PyTorch + HF Transformers**, which you’re already using.
+
+---
+
+### 4. APIs & syntax flavor
+
+This is where you really *feel* the difference.
+
+* **PyTorch style (imperative)**
+
+  ```python
+  import torch
+  import torch.nn as nn
+
+  class MyModel(nn.Module):
+      def __init__(self):
+          super().__init__()
+          self.linear = nn.Linear(768, 2)
+
+      def forward(self, x):
+          return self.linear(x)
+
+  model = MyModel()
+  logits = model(inputs)        # forward pass
+  loss = loss_fn(logits, labels)
+  loss.backward()               # autograd
+  optimizer.step()
+  ```
+
+  You manually write the training loop (or use a wrapper like `Trainer` / Lightning), and everything is just Python functions.
+
+* **TensorFlow / Keras style (declarative-ish)**
+
+  ```python
+  import tensorflow as tf
+  from tensorflow import keras
+  from tensorflow.keras import layers
+
+  inputs = keras.Input(shape=(768,))
+  outputs = layers.Dense(2)(inputs)
+  model = keras.Model(inputs, outputs)
+
+  model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+  model.fit(x_train, y_train, epochs=3, batch_size=32)
+  ```
+
+  Or with subclassing + `call`, but you typically let `model.fit()` handle the loop.
+
+So: PyTorch nudges you to think in terms of *explicit loops and operations*, TF/Keras nudges you toward *models you compile and fit*.
+
+---
+
+### 5. Required libraries / “stack” differences
+
+For a typical modern setup:
+
+* **PyTorch stack**
+
+  * `torch` (core)
+  * `torchvision`, `torchaudio` (optional)
+  * Extras like `accelerate`, `transformers`, `lightning`, etc.
+
+* **TensorFlow stack**
+
+  * `tensorflow` (includes tf.keras, tf.data, etc.)
+  * Optionally `tensorflow-text`, `tf-serving`, `tfds` (datasets), `tfx` for pipelines.
+
+Each ecosystem has its own idioms for data loading (`torch.utils.data.Dataset/DataLoader` vs `tf.data.Dataset`), logging, distributed training, and serving.
+
+---
+
+### 6. When to pick which (very rough heuristic)
+
+* **Pick PyTorch if**
+
+  * You’re using Hugging Face & modern LLMs.
+  * You like imperative, Pythonic code.
+  * You’re doing research / prototyping and want flexibility.
+
+* **Pick TensorFlow if**
+
+  * You’re deeply in the Keras/TFX world or GCP/TPU-heavy environment.
+  * Your org already standardized on TF.
+  * You want to stick with `model.fit()` style workflows and TFX pipelines.
+
+---
+
+If you tell me what you *personally* care about most (debug-ability, deployment, TPUs, speed, integration with HF, etc.), I can map this high-level comparison into a concrete recommendation for your stack and even show the same toy model in both PyTorch and TF so you can see the difference line-by-line.

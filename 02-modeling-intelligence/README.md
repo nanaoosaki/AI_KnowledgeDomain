@@ -125,7 +125,10 @@ Understanding model behavior is fundamental to AI leadership. You don't need to 
 
 - [1. Single-turn inference (API call)](how%20a%20chatbot%20experience%20different%20from%20API%20call.md)
 - [1. The intuition first](how%20BERT%20next%20sentence%20prediction%20different%20from%20GPT%20next%20token%20prediction.md)
+- [How To Set Up Remote Gpu And Local Notebook For Fine Tuning Pretrained Model](how%20to%20set%20up%20remote%20GPU%20and%20local%20notebook%20for%20fine-tuning%20pretrained%20model.md)
+- [Scaling Law And Parameter Size](scaling%20law%20and%20parameter%20size.md)
 - [🌟 1. What these tokens are called](summary%20of%20all%20the%20special%20tokens%20in%20language%20model.md)
+- [A simple, durable framework for all search systems](the%20search%20landscape.md)
 - [🌱 First: What actually changes between tasks?](what%20does%20it%20mean%20to%20train%20transfomer%20using%20your%20own%20corpus%20or%20dataset%20with%20labels.md)
 - [1. Why tokenization matters](what%20happends%20during%20inference%20when%20interacting%20with%20SOTA%20models%20through%20chatbot.md)
 - [1. More text ≠ easier classification](what%20makes%20resolution%20classification%20a%20much%20harder%20text%20classification%20task.md)
